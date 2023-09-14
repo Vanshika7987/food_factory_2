@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_07_111002) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_14_102718) do
   create_table "accounts", force: :cascade do |t|
     t.string "name"
     t.text "address"
@@ -65,7 +65,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_07_111002) do
   end
 
   create_table "menus", force: :cascade do |t|
-    t.string "menu_type"
+    t.string "type"
     t.integer "restaurant_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -93,6 +93,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_07_111002) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "restaurant_owner_id"
+    t.boolean "approval_request", default: false
   end
 
   create_table "test_models", force: :cascade do |t|
