@@ -6,7 +6,6 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/sign_up
   def new
-    # binding.pry
     super
   end
 
