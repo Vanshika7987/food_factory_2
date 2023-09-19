@@ -75,5 +75,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+gem 'activeadmin' # FIXME: revert to stable
+gem 'arctic_admin'
+gem 'sass-rails'
 gem 'devise'
 gem 'pry'
